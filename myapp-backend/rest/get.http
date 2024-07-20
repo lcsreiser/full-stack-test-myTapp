@@ -1,0 +1,6 @@
+GET http://localhost:3001/api/user/6 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzIxNDE2MTkwLCJleHAiOjE3MjE0MTk3OTB9.bIcUEHYKGWtde_xFQxzo_4ahzYRZe6wcXkTyfSWafaQ
+
+{
+}
