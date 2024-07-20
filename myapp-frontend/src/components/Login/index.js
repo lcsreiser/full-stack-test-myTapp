@@ -23,6 +23,10 @@ const Login = ({ setToken }) => {
     }
   };
 
+  const redirectToRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="login-container">
       <div className="login-box">
@@ -45,7 +49,12 @@ const Login = ({ setToken }) => {
             />
           </div>
           {error && <p>{error}</p>}
-          <button type="submit">Login</button>
+          <div className="button-container">
+            <button type="submit">Login</button>
+            <button type="button" onClick={redirectToRegister}>
+              Go to Register
+            </button>
+          </div>
         </form>
       </div>
     </div>

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,9 +17,14 @@ const Register = () => {
         password,
       });
       setMessage("User registered successfully!");
+      navigate("/login");
     } catch (err) {
       setMessage("Error registering user");
     }
+  };
+
+  const redirectToLogin = () => {
+    navigate("/login");
   };
 
   return (
@@ -41,7 +48,12 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit">Register</button>
+          <div className="button-container">
+            <button type="submit">Register</button>
+            <button type="button" onClick={redirectToLogin}>
+              Go to Login
+            </button>
+          </div>
         </form>
         {message && <p>{message}</p>}
       </div>

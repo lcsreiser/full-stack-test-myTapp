@@ -19,6 +19,18 @@
   text-align: center;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .register-box h2 {
   margin-bottom: 20px;
   color: #333333;

@@ -57,3 +57,15 @@
   color: red;
   margin-top: 10px;
 }
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
