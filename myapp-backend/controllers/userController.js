@@ -21,8 +21,3 @@ exports.login = async (req, res) => {
     const token = jwt.sign({ id: user.id }, 'secretkey', { expiresIn: '1h' })
     res.json({ token })
 }
-
-exports.getUser = async (req, res) => {
-    const user = await User.findByPk(req.params.id)
-    res.json(user)
-}
